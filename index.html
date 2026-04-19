@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-LIBRARY | Kolej ATX Aesthetic Nude</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">e-LIBRARY</div>
+        <div style="font-size: 0.8rem; font-weight: 600; opacity: 0.6;">SISTEM MAKLUMAT PERPUSTAKAAN</div>
+    </nav>
+
+    <div class="hero">
+        <img src="logo1.jpg" alt="Logo Kolej ATX" class="hero-logo">
+        <h1>Kolej ATX Digital Hub</h1>
+        <p>Pengalaman pembacaan yang tenang dan sistematik.</p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card"><h3>12,450</h3><span>KOLEKSI BUKU</span></div>
+        <div class="stat-card"><h3>850</h3><span>AHLI AKTIF</span></div>
+        <div class="stat-card"><h3>12</h3><span>BILIK BACAAN</span></div>
+        <div class="stat-card"><h3>88%</h3><span>KADAR PENGGUNAAN</span></div>
+    </div>
+
+    <div class="main-layout">
+        
+        <div class="form-section" id="pendaftaran">
+            <h2>Pendaftaran Ahli</h2>
+            <form action="proses_daftar.php" method="POST">
+                <div class="input-group">
+                    <label>Nama Pemohon</label>
+                    <input type="text" name="nama" placeholder="Cth: Nama Anda" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Nombor Matrik Pelajar/Pensyarah</label>
+                    <input type="text" name="matrik" placeholder="Cth: ATX123" required>
+                </div>
+
+                <div class="input-group">
+                    <label>E-mel</label>
+                    <input type="email" name="emel" placeholder="Cth: anda@atx.edu.my" required>
+                </div>
+
+                <div class="input-group">
+                    <label>No Telefon</label>
+                    <input type="tel" name="telefon" placeholder="Cth: 012-3456789" required>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn-primary">Tambah</button>
+                    <button type="button" class="btn-outline">Kemaskini</button>
+                    <button type="button" class="btn-danger">Padam</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-section" id="tempahan">
+    <h2>Tempahan Bilik</h2>
+    <form action="proses_tempahan.php" method="POST">
+        <div class="input-group">
+            <label>Nombor Matrik</label>
+            <input type="text" name="matrik" placeholder="Cth: ATX123" required>
+        </div>
+
+        <div class="input-group">
+            <label>Pilihan Bilik</label>
+            <select name="bilik">
+                <option value="Bilik Perbincangan A">Bilik Perbincangan A</option>
+                <option value="Bilik Perbincangan B">Bilik Perbincangan B</option>
+                <option value="Bilik Audio Visual">Bilik Audio Visual</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Tarikh Tempahan</label>
+            <input type="date" name="tarikh" required>
+        </div>
+        
+        <div class="input-group">
+            <div style="display: flex; gap: 10px;">
+                <div style="flex: 1;">
+                    <label>Masa Mula</label>
+                    <input type="time" name="masa_mula" required>
+                </div>
+                <div style="flex: 1;">
+                    <label>Masa Tamat</label>
+                    <input type="time" name="masa_tamat" required>
+                </div>
+            </div>
+        </div>
+        
+        <div class="actions">
+            <button type="submit" class="btn-primary">Tempahan</button>
+            <button type="button" class="btn-outline">Kemaskini</button>
+        </div>
+    </form>
+</div>
+
+    <footer>
+        <div style="margin-bottom: 10px; opacity: 0.5;">KOLEJ ATX PORTAL</div>
+        &copy; 2026 Hak Cipta Terpelihara. Rekaan Aesthetic Nude.
+    </footer>
+
+</body>
+</html>

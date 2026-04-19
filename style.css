@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+/* --- NUDE COLOR PALETTE --- */
+:root {
+    --primary: #5d544b;       /* Warm Earthy Brown */
+    --secondary: #a39382;     /* Muted Taupe */
+    --accent: #d4b996;        /* Soft Sand */
+    --bg-light: #f9f7f2;      /* Off-white / Cream */
+    --white: #ffffff;
+    --shadow-lg: 0 15px 35px rgba(93, 84, 75, 0.08); /* Soft Brownish Shadow */
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    background-color: var(--bg-light);
+    background-image: radial-gradient(at 0% 0%, rgba(212, 185, 150, 0.1) 0px, transparent 50%);
+    color: var(--primary);
+}
+
+/* --- NAVIGATION --- */
+nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(93, 84, 75, 0.05);
+}
+
+.nav-logo { 
+    font-weight: 800; 
+    font-size: 1.4rem; 
+    color: var(--primary); 
+    display: flex; 
+    align-items: center;
+    gap: 12px; 
+}
+
+/* --- LOGO DI BAHAGIAN HERO --- */
+.hero-logo {
+    width: 150px; /* Anda boleh ubah nilai ini untuk besarkan/kecilkan logo */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    mix-blend-mode: multiply; /* Membantu hilangkan background putih logo supaya 'blend' dengan warna tema */
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    background: linear-gradient(135deg, #e8e2d6 0%, #d4b996 100%);
+    color: var(--primary);
+    padding: 80px 10% 120px 10%;
+    text-align: center;
+}
+
+.hero h1 { font-size: 3rem; margin: 0; font-weight: 800; }
+.hero p { opacity: 0.8; font-weight: 400; }
+
+/* --- STATS GRID --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: -60px auto 40px auto;
+    padding: 0 20px;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(212, 185, 150, 0.2);
+}
+
+.stat-card h3 { margin: 0; color: var(--primary); font-size: 1.8rem; }
+.stat-card span { font-size: 0.75rem; letter-spacing: 1px; color: var(--secondary); font-weight: 600; }
+
+/* --- MAIN LAYOUT --- */
+.main-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.form-section {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.form-section h2 { 
+    font-size: 1.5rem; 
+    margin-bottom: 25px; 
+    color: var(--primary); 
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.input-group { margin-bottom: 20px; }
+label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: var(--secondary); }
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e2ddd6;
+    border-radius: 14px;
+    font-family: inherit;
+    background-color: #fdfcfb;
+    color: var(--primary);
+    transition: 0.3s;
+}
+
+input:focus, select:focus { outline: none; border-color: var(--accent); background-color: white; }
+
+/* --- BUTTONS --- */
+.actions { display: flex; gap: 10px; margin-top: 30px; }
+button { flex: 1; padding: 14px; border: none; border-radius: 14px; font-weight: 700; cursor: pointer; transition: 0.3s; }
+
+.btn-primary { background: var(--secondary); color: white; }
+.btn-primary:hover { background: var(--primary); transform: translateY(-2px); }
+
+.btn-danger { background: #f5f0ed; color: #a38282; }
+.btn-danger:hover { background: #e8dad5; }
+
+.btn-outline { background: transparent; border: 1.5px solid var(--accent); color: var(--secondary); }
+.btn-outline:hover { background: var(--accent); color: white; }
+
+footer { text-align: center; padding: 60px; color: var(--secondary); font-size: 0.8rem; }
+
+@media (max-width: 900px) { .main-layout { grid-template-columns: 1fr; } }
